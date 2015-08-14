@@ -1,3 +1,11 @@
 <div class="jumbotron">
-  <h1>Your Vehicle of interest</h1>
+  <h2>Your car of interest</h2>
 </div>
+
+<h3><%= @vehicle.make() %>
+    <%= @vehicle.model() %>
+    <%= @vehicle.year() %></h3>
+
+<a href="/" class="btn btn-success btn-sm">Go to Home Page</a>
+<a href="/vehicles" class="btn btn-success btn-sm">See Vehicle List</a>
+<a href="/vehicles/new" class="btn btn-success btn-sm">Add New Vehicle</a>

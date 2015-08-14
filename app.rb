@@ -29,7 +29,7 @@ end
   end
 
 # Single Vehicle Page, after clicking link on all vehicles page
-get('vehicles/:id') do  # server uses id FROM THE PATH to find the requested vehicle
+get('/vehicles/:id') do  # server uses id FROM THE PATH to find the requested vehicle
   @vehicle = Vehicle.find(params.fetch("id").to_i())
   erb(:vehicle)
 end

@@ -9,7 +9,7 @@ set(:show_exceptions, false)
 describe('the vehicle path', {:type => :feature}) do
   it('goes from home page to vehicles page') do
     visit('/')
-    click_link('View all our Vehicles')
+    click_link('See Dealership List')
     expect(page).to have_content('All our vehicles')
   end
 end

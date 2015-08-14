@@ -20,6 +20,12 @@ describe('Dealership') do
     end
   end
 
+  describe('#cars') do
+    it('returns the array of cars') do
+      test_dealership = Dealership.new("Bob's")
+      expect(test_dealership.cars()).to(eq([]))
+    end
+  end
 
 
 

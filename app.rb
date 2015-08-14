@@ -8,5 +8,10 @@ get('/') do
 end
 
 get('vehicles') do
+  @vehicles = Vehicle.all()  # server collects all the vehicles (Vehicle.all)
   erb(:vehicles)
+end
+
+get('vehicles/new') do   # form to enter new vehicle, note URL route diff from form name
+  erb(:vehicles_form)
 end

@@ -1,6 +1,26 @@
 class Dealership
   @@dealerships = []
 
+# Class Methods -----------------------
+  define_singleton_method(:all) do
+    @@dealerships
+  end
+
+  define_singleton_method(:clear) do
+    @@dealerships = []
+  end
+
+  define_singleton_method(:find) do |id|
+    found_dealership = nil
+    @@dealerships.each() do |dealership|
+      if dealership.id().eql?(id)
+        found_dealership = dealership
+      end
+    end
+    found_dealership
+  end
+
+# Instance Methods -----------------------
   define_method(:initialize) do |name|
     @name = name
     @id = @@dealerships.length().+(1)
@@ -23,13 +43,8 @@ class Dealership
     @@dealerships.push(self)
   end
 
-  define_singleton_method(:all) do
-    @@dealerships
+  define_method(:add_vehicle) do |vehicle|
+    @cars.push(vehicle)
   end
-
-  define_singleton_method(:clear) do
-    @@dealerships = []
-  end
-
-
+    # It takes a vehicle object as an argument and pushes it into the dealership's @cars array property.
 end

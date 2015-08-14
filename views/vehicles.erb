@@ -1,3 +1,15 @@
 <div class="jumbotron">
   <h1>All our vehicles</h1>
 </div>
+
+<ul>
+  <% @vehicles.each() do |vehicle| %>
+
+        <li><a href="/vehicles/<%= vehicle.id() %>">
+            <%= vehicle.id() %> )
+            <%= vehicle.make() %>
+            <%= vehicle.model() %>:
+            <%= vehicle.year() %></a></li>
+
+  <% end %>
+</ul>

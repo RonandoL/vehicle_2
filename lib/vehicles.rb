@@ -67,9 +67,4 @@ class Vehicle
     @id
   end
 
-
-
-
-
-
 end
